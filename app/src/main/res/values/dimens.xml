@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+
+    <dimen name="nav_header_vertical_spacing">@dimen/margin_small</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">@dimen/margin_default</dimen>
+    <dimen name="profile_image_size">64dp</dimen>
+</resources>

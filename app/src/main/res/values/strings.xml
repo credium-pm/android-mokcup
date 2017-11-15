@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Credium</string>
+    <string name="liquefied_notes">Liquefied Notes</string>
+    <string name="loan_assets">Loan assets</string>
+    <string name="account">Account</string>
+    <string name="settings">Settings</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="profile_image_desc">Profile image</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Navigation drawer close</string>
 </resources>
