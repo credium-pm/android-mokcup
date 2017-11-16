@@ -26,14 +26,14 @@ class MainActivity : AppCompatActivity() {
         drawerToggle.syncState()
 
         navigationView.setNavigationItemSelectedListener { item ->
-            if (item.itemId == R.id.nav_settings)
+            if (item.itemId == R.id.navSettings)
                 startActivity(Intent(this, SettingsActivity::class.java))
             else {
                 val (fragment, titleStringResource) = when (item.itemId) {
-                    R.id.nav_dashboard -> Fragment() to R.string.dashboard
-                    R.id.nav_portfolio -> Fragment() to R.string.portfolio
-                    R.id.nav_market -> Fragment() to R.string.market
-                    R.id.nav_loans -> LoansFragment() to R.string.loans
+                    R.id.navDashboard -> Fragment() to R.string.dashboard
+                    R.id.navPortfolio -> Fragment() to R.string.portfolio
+                    R.id.navMarket -> Fragment() to R.string.market
+                    R.id.navLoans -> LoansFragment() to R.string.loans
                     else -> throw RuntimeException("No handler for item id: ${item.itemId}")
                 }
                 replaceFragment(R.id.containerFrame, fragment)
@@ -42,8 +42,8 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-        navigationView.menu.performIdentifierAction(R.id.nav_loans, 0)
-        navigationView.setCheckedItem(R.id.nav_loans)
+        navigationView.menu.performIdentifierAction(R.id.navLoans, 0)
+        navigationView.setCheckedItem(R.id.navLoans)
     }
 
     override fun onBackPressed() {
