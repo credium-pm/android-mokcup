@@ -1,5 +1,7 @@
 package com.credium.loans
 
+import android.os.Build
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -43,6 +45,9 @@ class LoansAdapter(private val loans: List<Loan>) : RecyclerView.Adapter<Recycle
         fun bind(loan: Loan) {
             // TODO: display loan
             titleText.text = "1000 USD"
+            val context = titleText.context
+            val color = ContextCompat.getColor(context, if (loan.isLocked) R.color.lockedColor else R.color.unlockedColor)
+            titleText.setTextColor(color)
             subText1.text = "50 USD per month"
             subText2.text = "20 months left"
         }

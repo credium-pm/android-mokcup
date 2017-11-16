@@ -1,4 +1,4 @@
-package com.credium
+package com.credium.loans
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -8,9 +8,9 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.credium.R
 import com.credium.data.DollarUsaCurrency
 import com.credium.data.Loan
-import com.credium.loans.LoansAdapter
 import com.credium.util.bindView
 
 
