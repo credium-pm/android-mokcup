@@ -1,11 +1,11 @@
 package com.credium.loans
 
-import android.os.Build
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import com.credium.R
 import com.credium.data.Loan
@@ -38,16 +38,23 @@ class LoansAdapter(private val loans: List<Loan>) : RecyclerView.Adapter<Recycle
     override fun getItemCount(): Int = loans.size
 
     inner class LoanViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val iconImage by bindView<ImageView>(R.id.iconImage)
         private val titleText by bindView<TextView>(R.id.titleText)
         private val subText1 by bindView<TextView>(R.id.subText1)
         private val subText2 by bindView<TextView>(R.id.subText2)
 
         fun bind(loan: Loan) {
             // TODO: display loan
-            titleText.text = "1000 USD"
             val context = titleText.context
-            val color = ContextCompat.getColor(context, if (loan.isLocked) R.color.lockedColor else R.color.unlockedColor)
-            titleText.setTextColor(color)
+            val (iconRes, colorRes) = if (loan.isLocked)
+                R.drawable.ic_circle_locked to R.color.lockedColor
+            else
+                R.drawable.is_circle_unlocked to R.color.unlockedColor
+            iconImage.setImageDrawable(ContextCompat.getDrawable(context, iconRes))
+            titleText.apply {
+                text = "1000 USD"
+                setTextColor(ContextCompat.getColor(context, colorRes))
+            }
             subText1.text = "50 USD per month"
             subText2.text = "20 months left"
         }
