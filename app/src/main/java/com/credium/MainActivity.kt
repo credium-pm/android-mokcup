@@ -20,8 +20,16 @@ class MainActivity : AppCompatActivity() {
         drawerToggle.syncState()
 
         navigationView.setNavigationItemSelectedListener { item ->
-            when (item.itemId) {
+            val (fragment, title) = when (item.itemId) {
             // TODO: handle particular item click
+                R.id.nav_loans -> LoansFragment() to getString(R.string.loans)
+                else -> null to null
+            }
+            fragment?.let {
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.containerFrame, it)
+                        .commit()
+                this@MainActivity.title = title!!
             }
             drawerLayout.closeDrawer(GravityCompat.START)
             true
