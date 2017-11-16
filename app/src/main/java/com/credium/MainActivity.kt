@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import com.credium.loans.LoansFragment
 import com.credium.settings.SettingsActivity
+import com.credium.util.replaceFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -35,14 +36,14 @@ class MainActivity : AppCompatActivity() {
                     R.id.nav_loans -> LoansFragment() to R.string.loans
                     else -> throw RuntimeException("No handler for item id: ${item.itemId}")
                 }
-                supportFragmentManager.beginTransaction()
-                        .replace(R.id.containerFrame, fragment)
-                        .commit()
+                replaceFragment(R.id.containerFrame, fragment)
                 this.title = getString(titleStringResource)
                 drawerLayout.closeDrawer(GravityCompat.START)
             }
             true
         }
+        navigationView.menu.performIdentifierAction(R.id.nav_loans, 0)
+        navigationView.setCheckedItem(R.id.nav_loans)
     }
 
     override fun onBackPressed() {
