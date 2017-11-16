@@ -12,4 +12,6 @@
     <string name="locked">Locked</string>
     <string name="unlocked">Unlocked</string>
 
+    <string name="unlocked_loan_template_title">%1$s %2$s</string>
+    <string name="locked_loan_template_title">%1$s %2$s (Locked)</string>
 </resources>

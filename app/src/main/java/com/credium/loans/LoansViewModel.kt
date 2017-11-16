@@ -10,9 +10,9 @@ class LoansViewModel : ViewModel() {
 
     // TODO: load from somewhere
     private val loans = listOf(
-            Loan(DollarUsaCurrency, amount = 2000.0, months = 12, isLocked = false),
-            Loan(DollarUsaCurrency, amount = 1000.0, months = 3, isLocked = true),
-            Loan(DollarUsaCurrency, amount = 10000.0, months = 24, isLocked = true)
+            Loan(DollarUsaCurrency, amount = 2000, months = 12, isLocked = false),
+            Loan(DollarUsaCurrency, amount = 1000, months = 3, isLocked = true),
+            Loan(DollarUsaCurrency, amount = 10000, months = 24, isLocked = true)
     )
 
     val loansLiveData = MutableLiveData<List<Loan>>()

@@ -1,8 +1,8 @@
 package com.credium.data
 
 
-data class Loan(val currency: Currency, val amount: Double, val months: Int, var isLocked: Boolean) {
+data class Loan(val currency: Currency, val amount: Int, val months: Int, var isLocked: Boolean) {
 
-    val amountPerMonth: Double
+    val amountPerMonth: Int
         get() = amount / months
 }

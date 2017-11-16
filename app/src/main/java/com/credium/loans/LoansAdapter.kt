@@ -37,6 +37,8 @@ class LoansAdapter(private val loans: List<Loan>) : RecyclerView.Adapter<Recycle
 
     override fun getItemCount(): Int = loans.size
 
+    private class ResourceBundle(val icon: Int, val color: Int, val string: Int)
+
     inner class LoanViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val iconImage by bindView<ImageView>(R.id.iconImage)
         private val titleText by bindView<TextView>(R.id.titleText)
@@ -46,14 +48,14 @@ class LoansAdapter(private val loans: List<Loan>) : RecyclerView.Adapter<Recycle
         fun bind(loan: Loan) {
             // TODO: display loan
             val context = titleText.context
-            val (iconRes, colorRes) = if (loan.isLocked)
-                R.drawable.ic_circle_locked to R.color.lockedColor
+            val res = if (loan.isLocked)
+                ResourceBundle(R.drawable.ic_circle_locked, R.color.lockedColor, R.string.locked_loan_template_title)
             else
-                R.drawable.is_circle_unlocked to R.color.unlockedColor
-            iconImage.setImageDrawable(ContextCompat.getDrawable(context, iconRes))
+                ResourceBundle(R.drawable.is_circle_unlocked, R.color.unlockedColor, R.string.unlocked_loan_template_title)
+            iconImage.setImageDrawable(ContextCompat.getDrawable(context, res.icon))
             titleText.apply {
-                text = "1000 USD"
-                setTextColor(ContextCompat.getColor(context, colorRes))
+                text = context.getString(res.string, loan.amount, loan.currency.label)
+                setTextColor(ContextCompat.getColor(context, res.color))
             }
             subText1.text = "50 USD per month"
             subText2.text = "20 months left"
