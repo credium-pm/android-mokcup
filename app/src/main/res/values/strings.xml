@@ -8,4 +8,6 @@
     <string name="profile_image_desc">Profile image</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Navigation drawer close</string>
+    <string name="liquid">Liquid</string>
+    <string name="non_liquid">Non liquid</string>
 </resources>
