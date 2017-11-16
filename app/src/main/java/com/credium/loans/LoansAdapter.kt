@@ -46,7 +46,6 @@ class LoansAdapter(private val loans: List<Loan>) : RecyclerView.Adapter<Recycle
         private val subText2 by bindView<TextView>(R.id.subText2)
 
         fun bind(loan: Loan) {
-            // TODO: display loan
             val context = titleText.context
             val res = if (loan.isLocked)
                 ResourceBundle(R.drawable.ic_circle_locked, R.color.lockedColor, R.string.locked_loan_template_title)
@@ -57,8 +56,8 @@ class LoansAdapter(private val loans: List<Loan>) : RecyclerView.Adapter<Recycle
                 text = context.getString(res.string, loan.amount, loan.currency.label)
                 setTextColor(ContextCompat.getColor(context, res.color))
             }
-            subText1.text = "50 USD per month"
-            subText2.text = "20 months left"
+            subText1.text = context.getString(R.string.loan_subtitle1, loan.amountPerMonth.toString(), loan.currency.label)
+            subText2.text = context.resources.getQuantityString(R.plurals.loan_subtitle2, loan.months, loan.months)
         }
     }
 }
