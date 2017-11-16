@@ -19,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
 
         // TODO: do expensive work in ViewModel?
         job = launch(UI) {
-            delay(3000L)
+            delay(1000L)
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             finish()
         }
