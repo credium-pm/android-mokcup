@@ -18,7 +18,7 @@
         android:clickable="true"
         android:focusable="true"
         android:src="@drawable/ic_add"
-        app:backgroundTint="@color/colorLightBlue"
+        app:backgroundTint="@color/colorDarkBlue"
         app:elevation="@dimen/fab_margin" />
 
 </FrameLayout>
