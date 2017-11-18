@@ -6,8 +6,7 @@ sealed class Loan(
         val amount: Int,
         val amountPerMonth: Int,
         val months: Int,
-        var isLocked: Boolean) {
-}
+        var isLocked: Boolean)
 
 class LockedLoan(currency: Currency,
                  amount: Int,

@@ -13,7 +13,10 @@ import com.credium.data.UnlockedLoan
 import com.credium.util.bindView
 
 
-class LoansAdapter(private val loans: List<Loan>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class LoansAdapter(
+        private val loans: List<Loan>,
+        val onClickListener: OnClickListener
+) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
         const val LOCKED = 0
@@ -45,6 +48,12 @@ class LoansAdapter(private val loans: List<Loan>) : RecyclerView.Adapter<Recycle
         private val text2 by bindView<TextView>(R.id.text2)
         private val text3 by bindView<TextView>(R.id.text3)
 
+        init {
+            itemView.setOnClickListener {
+                onClickListener.onClick(loans[adapterPosition])
+            }
+        }
+
         fun bind(loan: Loan) {
             val context = titleText.context
             val drawableResource = if (loan.isLocked) R.drawable.ic_circle_locked else R.drawable.ic_circle_unlocked
@@ -65,5 +74,9 @@ class LoansAdapter(private val loans: List<Loan>) : RecyclerView.Adapter<Recycle
                 )
             }
         }
+    }
+
+    interface OnClickListener {
+        fun onClick(loan: Loan)
     }
 }

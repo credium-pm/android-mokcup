@@ -1,6 +1,5 @@
 package com.credium.loans
 
-import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -10,26 +9,29 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.credium.R
-import com.credium.util.bindView
+import com.credium.data.Loan
+import com.credium.util.replaceFragment
 
 
 class LoansFragment : Fragment() {
 
-    private val loanList by bindView<RecyclerView>(R.id.loanList)
+    private lateinit var loanList: RecyclerView
     private lateinit var loansViewModel: LoansViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
             inflater.inflate(R.layout.fragment_loans, container, false)
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        loansViewModel = ViewModelProviders.of(this).get(LoansViewModel::class.java)
+        loanList = view.findViewById(R.id.loanList)
+        loansViewModel = ViewModelProviders.of(activity!!).get(LoansViewModel::class.java)
         loanList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        loansViewModel.loansLiveData.observe(this, Observer { loans ->
-            loans?.let {
-                loanList.adapter = LoansAdapter(loans)
+        loanList.adapter = LoansAdapter(loansViewModel.loans, object : LoansAdapter.OnClickListener {
+            override fun onClick(loan: Loan) {
+                loansViewModel.selectedLoan = loan
+                activity?.replaceFragment(R.id.containerFrame, LoanDetails(), addToBackStack = true)
             }
         })
-        loansViewModel.onReady()
     }
 }
