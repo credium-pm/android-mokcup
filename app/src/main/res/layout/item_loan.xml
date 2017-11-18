@@ -1,67 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clickable="true"
     android:focusable="true"
+    android:background="#ffffff"
     android:foreground="?android:attr/selectableItemBackground"
-    android:minHeight="?android:attr/listPreferredItemHeightLarge">
+    android:minHeight="@dimen/loanItemMinHeight"
+    android:orientation="horizontal"
+    tools:layout_editor_absoluteY="81dp"
+    android:baselineAligned="false">
 
-    <TextView
-        android:id="@+id/titleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/iconImage"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="1000 USD" />
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
 
-    <TextView
-        android:id="@+id/subText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/titleText"
-        app:layout_constraintTop_toBottomOf="@+id/titleText"
-        tools:text="50 USD per month" />
+        <ImageView
+            android:id="@+id/iconImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            tools:src="@mipmap/ic_launcher" />
 
-    <TextView
-        android:id="@+id/subText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/subText1"
-        app:layout_constraintTop_toBottomOf="@+id/subText1"
-        tools:text="10 months left" />
+    </FrameLayout>
 
-    <ImageView
-        android:id="@+id/iconImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:contentDescription="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@mipmap/ic_launcher" />
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleText"
+                style="@style/LoanItemTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="1000 USD" />
+
+            <TextView
+                android:id="@+id/text1"
+                style="@style/LoanItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="50 USD per month" />
+
+            <TextView
+                android:id="@+id/text2"
+                style="@style/LoanItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="10 months left" />
+
+            <TextView
+                android:id="@+id/text3"
+                style="@style/LoanItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="600 USD note pending sell for 450 USD" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="#EBF2FA" />
+
+    </FrameLayout>
+</LinearLayout>

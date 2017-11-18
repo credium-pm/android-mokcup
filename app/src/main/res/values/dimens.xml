@@ -8,5 +8,7 @@
     <dimen name="fab_margin">@dimen/margin_default</dimen>
     <dimen name="profile_image_size">64dp</dimen>
 
-    <dimen name="listItemIconSize">54dp</dimen>
+    <dimen name="listItemIconSize">64dp</dimen>
+    <dimen name="titleTextLineSpacingExtra">8dp</dimen>
+    <dimen name="loanItemMinHeight">106dp</dimen>
 </resources>

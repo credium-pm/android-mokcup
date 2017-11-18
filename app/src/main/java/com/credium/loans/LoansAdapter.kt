@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.credium.R
 import com.credium.data.Loan
+import com.credium.data.UnlockedLoan
 import com.credium.util.bindView
 
 
@@ -37,27 +38,32 @@ class LoansAdapter(private val loans: List<Loan>) : RecyclerView.Adapter<Recycle
 
     override fun getItemCount(): Int = loans.size
 
-    private class ResourceBundle(val icon: Int, val color: Int, val string: Int)
-
     inner class LoanViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val iconImage by bindView<ImageView>(R.id.iconImage)
         private val titleText by bindView<TextView>(R.id.titleText)
-        private val subText1 by bindView<TextView>(R.id.subText1)
-        private val subText2 by bindView<TextView>(R.id.subText2)
+        private val text1 by bindView<TextView>(R.id.text1)
+        private val text2 by bindView<TextView>(R.id.text2)
+        private val text3 by bindView<TextView>(R.id.text3)
 
         fun bind(loan: Loan) {
             val context = titleText.context
-            val res = if (loan.isLocked)
-                ResourceBundle(R.drawable.ic_circle_locked, R.color.lockedColor, R.string.locked_loan_template_title)
-            else
-                ResourceBundle(R.drawable.is_circle_unlocked, R.color.unlockedColor, R.string.unlocked_loan_template_title)
-            iconImage.setImageDrawable(ContextCompat.getDrawable(context, res.icon))
-            titleText.apply {
-                text = context.getString(res.string, loan.amount, loan.currency.label)
-                setTextColor(ContextCompat.getColor(context, res.color))
+            val drawableResource = if (loan.isLocked) R.drawable.ic_circle_locked else R.drawable.ic_circle_unlocked
+            val stringResource = if (loan.isLocked) R.string.locked_loan_template_title else R.string.unlocked_loan_template_title
+
+            iconImage.setImageDrawable(ContextCompat.getDrawable(context, drawableResource))
+            titleText.text = context.getString(stringResource, loan.amount.toString(), loan.currency.label)
+            text1.text = context.getString(R.string.loan_subtitle1, loan.amountPerMonth.toString(), loan.currency.label)
+            text2.text = context.resources.getQuantityString(R.plurals.loan_subtitle2, loan.months, loan.months)
+            if (loan is UnlockedLoan) {
+                // TODO: set colors
+                text3.text = context.resources.getString(
+                        R.string.loan_pending,
+                        loan.pendingAmount.toString(),
+                        loan.currency.label,
+                        loan.sellFor.toString(),
+                        loan.currency.label
+                )
             }
-            subText1.text = context.getString(R.string.loan_subtitle1, loan.amountPerMonth.toString(), loan.currency.label)
-            subText2.text = context.resources.getQuantityString(R.plurals.loan_subtitle2, loan.months, loan.months)
         }
     }
 }

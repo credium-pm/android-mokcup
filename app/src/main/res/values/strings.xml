@@ -16,6 +16,7 @@
     <string name="locked_loan_template_title">%1$s %2$s (Locked)</string>
 
     <string name="loan_subtitle1">%1$s %2$s per month</string>
+    <string name="loan_pending">%1$s %2$s note pending sell for %3$s %4$s</string>
     <plurals name="loan_subtitle2">
         <item quantity="one">One month left</item>
         <item quantity="other">%d months left</item>
