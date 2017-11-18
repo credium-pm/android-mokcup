@@ -6,9 +6,18 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/loanList"
-        android:background="#E9EEF4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="#E9EEF4" />
+
+    <TextView
+        android:id="@+id/noDataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/no_loans"
+        android:textSize="20sp"
+        android:visibility="gone" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

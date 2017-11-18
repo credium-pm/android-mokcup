@@ -8,4 +8,5 @@
     <color name="colorLightBlue">#02a6fb</color>
     <color name="colorDarkBlue">#016df6</color>
     <color name="titleTextColor">#1c2a3c</color>
+    <color name="defaultBg">#e9eef4</color>
 </resources>

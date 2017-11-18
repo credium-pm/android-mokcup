@@ -26,6 +26,11 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
+            android:name=".wizard.ImportLoansWizardActivity"
+            android:label="@string/import_loans"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".settings.SettingsActivity"
             android:label="@string/settings" />
 
