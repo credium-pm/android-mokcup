@@ -3,7 +3,6 @@ package com.credium.wizard
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import com.credium.loans.SelectPlatformFragment
 import com.credium.util.replaceFragment
 
 

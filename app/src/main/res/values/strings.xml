@@ -19,6 +19,7 @@
     <string name="loan_pending">%1$s %2$s note pending sell for %3$s %4$s</string>
     <string name="no_loans">Nothing here. Import some loans.</string>
     <string name="import_loans">Import Loans</string>
+    <string name="enable_camera_permission">Please enable camera permission</string>
     <plurals name="loan_subtitle2">
         <item quantity="one">One month left</item>
         <item quantity="other">%d months left</item>
