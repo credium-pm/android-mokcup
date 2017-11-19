@@ -12,7 +12,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.credium.R
 import com.credium.data.Loan
-import com.credium.util.debug
 import com.credium.util.hide
 import com.credium.util.replaceFragment
 import com.credium.util.show
@@ -55,7 +54,6 @@ class LoansFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == RC_IMPORT_LOANS && resultCode == Activity.RESULT_OK) {
             loansViewModel.loadLoans()
-            debug("Result OK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         } else
             super.onActivityResult(requestCode, resultCode, data)
     }

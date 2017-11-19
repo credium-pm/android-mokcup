@@ -71,7 +71,7 @@ class SelectPlatformFragment : Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == RC_CAMERA_RESULT && resultCode == Activity.RESULT_OK) {
-            activity?.replaceFragment(LoansImportedFragment(), id = android.R.id.content, addToBackStack = true)
+            activity?.replaceFragment(ImportingLoansFragment(), id = android.R.id.content, addToBackStack = true)
         } else
             super.onActivityResult(requestCode, resultCode, data)
     }
