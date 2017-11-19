@@ -3,19 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:baselineAligned="false"
     android:clickable="true"
     android:focusable="true"
-    android:background="#ffffff"
     android:foreground="?android:attr/selectableItemBackground"
     android:minHeight="@dimen/loanItemMinHeight"
     android:orientation="horizontal"
-    tools:layout_editor_absoluteY="81dp"
-    android:baselineAligned="false">
+    tools:layout_editor_absoluteY="81dp">
 
     <FrameLayout
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="2">
+        android:paddingEnd="@dimen/margin_large"
+        android:paddingLeft="@dimen/margin_large"
+        android:paddingRight="@dimen/margin_large"
+        android:paddingStart="@dimen/margin_large">
 
         <ImageView
             android:id="@+id/iconImage"
@@ -28,9 +31,8 @@
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="4">
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
