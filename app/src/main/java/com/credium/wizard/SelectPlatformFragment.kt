@@ -10,10 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.credium.R
-import com.credium.util.processPermissionResults
-import com.credium.util.replaceFragment
-import com.credium.util.requestPermissionsIfNeeded
-import com.credium.util.showToast
+import com.credium.util.*
 import kotlinx.android.synthetic.main.fragment_select_platform.*
 
 
@@ -71,7 +68,7 @@ class SelectPlatformFragment : Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == RC_CAMERA_RESULT && resultCode == Activity.RESULT_OK) {
-            activity?.replaceFragment(ImportingLoansFragment(), id = android.R.id.content, addToBackStack = true)
+            activity?.replaceFragment(ImportingLoansFragment(), addToBackStack = true)
         } else
             super.onActivityResult(requestCode, resultCode, data)
     }

@@ -24,7 +24,7 @@ class ImportingLoansFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         job = launch(UI) {
             delay(5000)
-            activity?.replaceFragment(LoansImportedFragment(), id = android.R.id.content)
+            activity?.replaceFragment(LoansImportedFragment())
         }
     }
 

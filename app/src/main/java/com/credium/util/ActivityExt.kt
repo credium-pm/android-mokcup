@@ -8,16 +8,22 @@ import android.widget.Toast
 import com.credium.R
 
 
-fun AppCompatActivity.replaceFragment(id: Int, fragment: Fragment, addToBackStack: Boolean = false) {
-    val transaction = supportFragmentManager.beginTransaction()
-            .replace(id, fragment)
+fun AppCompatActivity.replaceFragment(fragment: Fragment,
+                                      id: Int = android.R.id.content,
+                                      addToBackStack: Boolean = false,
+                                      animateReplace: Boolean = true) {
+    val transaction = supportFragmentManager.beginTransaction().apply {
+        if (animateReplace)
+            setCustomAnimations(R.anim.slide_in_top, R.anim.slide_out_bottom, R.anim.slide_in_top, R.anim.slide_out_bottom)
+        replace(id, fragment)
+    }
     if (addToBackStack)
         transaction.addToBackStack(null)
     transaction.commit()
 }
 
-fun Activity.replaceFragment(fragment: Fragment, id: Int = R.id.containerFrame, addToBackStack: Boolean = false) {
-    (this as? AppCompatActivity)?.replaceFragment(id, fragment, addToBackStack)
+fun Activity.replaceFragment(fragment: Fragment, id: Int = android.R.id.content, addToBackStack: Boolean = false) {
+    (this as? AppCompatActivity)?.replaceFragment(fragment, id, addToBackStack)
 }
 
 fun AppCompatActivity.setActionBarDrawable(drawable: Int) {

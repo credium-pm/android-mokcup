@@ -63,7 +63,7 @@ class LoansFragment : Fragment() {
         loanList.adapter = LoansAdapter(loansViewModel.loans, object : LoansAdapter.OnClickListener {
             override fun onClick(loan: Loan) {
                 loansViewModel.selectedLoan = loan
-                activity?.replaceFragment(LoanDetails(), addToBackStack = true)
+                activity?.replaceFragment(LoanDetails(), id = R.id.containerFrame, addToBackStack = true)
             }
         })
     }

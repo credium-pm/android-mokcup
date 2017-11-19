@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.navLoans -> LoansFragment() to R.string.loans
                     else -> throw RuntimeException("No handler for item id: ${item.itemId}")
                 }
-                replaceFragment(R.id.containerFrame, fragment)
+                replaceFragment(fragment, R.id.containerFrame)
                 this.title = getString(titleStringResource)
                 drawerLayout.closeDrawer(GravityCompat.START)
             }

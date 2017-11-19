@@ -14,7 +14,7 @@ class ImportLoansWizardActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         if (savedInstanceState == null) {
-            replaceFragment(SelectPlatformFragment(), id = android.R.id.content)
+            replaceFragment(SelectPlatformFragment(), animateReplace = false)
         }
     }
 
