@@ -1,5 +1,6 @@
 package com.credium
 
+import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -7,6 +8,7 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import com.credium.loans.LoansFragment
+import com.credium.loans.LoansViewModel
 import com.credium.settings.SettingsActivity
 import com.credium.util.replaceFragment
 import com.credium.util.setActionBarDrawable
@@ -16,8 +18,12 @@ import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var loansViewModel: LoansViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        loansViewModel = ViewModelProviders.of(this).get(LoansViewModel::class.java)
+
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         setActionBarDrawable(R.drawable.bg_blue_gradient)

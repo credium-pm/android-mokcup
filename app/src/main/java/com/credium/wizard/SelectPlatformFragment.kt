@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.credium.R
 import com.credium.util.processPermissionResults
+import com.credium.util.replaceFragment
 import com.credium.util.requestPermissionsIfNeeded
 import com.credium.util.showToast
 import kotlinx.android.synthetic.main.fragment_select_platform.*
@@ -70,7 +71,7 @@ class SelectPlatformFragment : Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == RC_CAMERA_RESULT && resultCode == Activity.RESULT_OK) {
-            // TODO: show imported loans info screen
+            activity?.replaceFragment(LoansImportedFragment(), id = android.R.id.content, addToBackStack = true)
         } else
             super.onActivityResult(requestCode, resultCode, data)
     }
