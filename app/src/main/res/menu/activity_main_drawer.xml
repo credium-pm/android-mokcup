@@ -9,13 +9,9 @@
             android:icon="@drawable/ic_nav_dashboard"
             android:title="@string/dashboard" />
         <item
-            android:id="@+id/navPortfolio"
-            android:icon="@drawable/ic_nav_portfolio"
-            android:title="@string/portfolio" />
-        <item
-            android:id="@+id/navMarket"
-            android:icon="@drawable/ic_nav_market"
-            android:title="@string/market" />
+            android:id="@+id/navNotes"
+            android:icon="@drawable/ic_nav_notes"
+            android:title="@string/notes" />
         <item
             android:id="@+id/navLoans"
             android:icon="@drawable/ic_nav_loans"
@@ -29,6 +25,10 @@
             android:id="@+id/navSettings"
             android:icon="@drawable/ic_nav_settings"
             android:title="@string/settings" />
+        <item
+            android:id="@+id/navResetMockup"
+            android:icon="@drawable/ic_nav_reset_mockup"
+            android:title="@string/reset_mockup" />
     </group>
 
 </menu>

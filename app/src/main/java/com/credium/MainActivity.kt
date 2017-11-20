@@ -39,8 +39,7 @@ class MainActivity : AppCompatActivity() {
             else {
                 val (fragment, titleStringResource) = when (item.itemId) {
                     R.id.navDashboard -> Fragment() to R.string.dashboard
-                    R.id.navPortfolio -> Fragment() to R.string.portfolio
-                    R.id.navMarket -> Fragment() to R.string.market
+                    R.id.navNotes -> Fragment() to R.string.notes
                     R.id.navLoans -> LoansFragment() to R.string.loans
                     else -> throw RuntimeException("No handler for item id: ${item.itemId}")
                 }
