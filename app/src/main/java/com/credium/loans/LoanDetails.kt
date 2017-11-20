@@ -15,7 +15,7 @@ class LoanDetails : Fragment() {
     private lateinit var loansViewModel: LoansViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-            inflater.inflate(R.layout.fragment_loan_details, container, false)
+            inflater.inflate(R.layout.fragment_locked_loan_details, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

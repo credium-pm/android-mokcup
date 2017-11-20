@@ -38,14 +38,23 @@
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="WizardScreenTitle">
-        <item name="android:layout_marginEnd">16dp</item>
-        <item name="android:layout_marginStart">16dp</item>
-        <item name="android:layout_marginLeft">16dp</item>
-        <item name="android:layout_marginRight">16dp</item>
-        <item name="android:layout_marginTop">24dp</item>
+    <style name="LargeTitleText">
+        <item name="android:layout_marginEnd">@dimen/margin_default</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:layout_marginLeft">@dimen/margin_default</item>
+        <item name="android:layout_marginRight">@dimen/margin_default</item>
+        <item name="android:layout_marginTop">@dimen/margin_large</item>
         <item name="android:textColor">@color/titleTextColor</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/titleTextSize</item>
+    </style>
+
+    <style name="DescriptionText">
+        <item name="android:layout_marginEnd">@dimen/margin_default</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">@dimen/descriptionTextSize</item>
+        <item name="android:textColor">@color/descriptionTextColor</item>
     </style>
 
 </resources>

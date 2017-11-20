@@ -12,4 +12,7 @@
     <dimen name="listItemIconSize">64dp</dimen>
     <dimen name="titleTextLineSpacingExtra">8dp</dimen>
     <dimen name="loanItemMinHeight">106dp</dimen>
+
+    <dimen name="titleTextSize">20sp</dimen>
+    <dimen name="descriptionTextSize">14sp</dimen>
 </resources>

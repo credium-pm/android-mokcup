@@ -2,11 +2,16 @@
 <resources>
     <color name="colorPrimary">#02a6fb</color>
     <color name="colorPrimaryDark">#1276C5</color>
-    <color name="colorAccent">#4CAF50</color>
+    <color name="colorAccent">#02a6fb</color>
+
+    <color name="defaultBg">#e9eef4</color>
+
     <color name="unlockedColor">#E4EFFD</color>
     <color name="lockedColor">#F7E7E7</color>
+
     <color name="colorLightBlue">#02a6fb</color>
     <color name="colorDarkBlue">#016df6</color>
+
     <color name="titleTextColor">#1c2a3c</color>
-    <color name="defaultBg">#e9eef4</color>
+    <color name="descriptionTextColor">#1c2a3c</color>
 </resources>
