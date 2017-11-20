@@ -23,7 +23,7 @@ class ImportingLoansFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         job = launch(UI) {
-            delay(5000)
+            delay(2000)
             activity?.replaceFragment(LoansImportedFragment())
         }
     }
