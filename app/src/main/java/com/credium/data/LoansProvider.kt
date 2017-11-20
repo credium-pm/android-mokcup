@@ -1,8 +1,4 @@
-package com.credium.loans
-
-import com.credium.data.DollarUsaCurrency
-import com.credium.data.Loan
-import com.credium.data.LockedLoan
+package com.credium.data
 
 
 object LoansProvider {

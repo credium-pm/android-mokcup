@@ -3,6 +3,7 @@ package com.credium.loans
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.credium.data.Loan
+import com.credium.data.LoansProvider
 
 
 class LoansViewModel : ViewModel() {

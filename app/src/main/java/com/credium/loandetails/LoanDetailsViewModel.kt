@@ -2,7 +2,7 @@ package com.credium.loandetails
 
 import android.arch.lifecycle.ViewModel
 import com.credium.data.Loan
-import com.credium.loans.LoansProvider
+import com.credium.data.LoansProvider
 
 
 class LoanDetailsViewModel : ViewModel() {
