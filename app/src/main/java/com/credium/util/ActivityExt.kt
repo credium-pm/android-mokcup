@@ -38,3 +38,11 @@ fun Activity.showToast(textResId: Int, vararg formatArgs: String) {
     val text = getString(textResId, *formatArgs)
     Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
 }
+
+fun AppCompatActivity.showHomeUpNavigation() {
+    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+}
+
+fun Activity.showHomeUpNavigation() {
+    (this as? AppCompatActivity)?.showHomeUpNavigation()
+}

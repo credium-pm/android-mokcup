@@ -3,6 +3,7 @@
     package="com.credium">
 
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
@@ -32,6 +33,11 @@
         <activity
             android:name=".wizard.ImportLoansWizardActivity"
             android:label="@string/import_loans"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".loandetails.LoanDetailsActivity"
+            android:label="@string/loan"
             android:screenOrientation="portrait" />
 
         <activity

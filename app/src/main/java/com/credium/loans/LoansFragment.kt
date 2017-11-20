@@ -12,8 +12,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.credium.R
 import com.credium.data.Loan
+import com.credium.loandetails.LoanDetailsActivity
 import com.credium.util.hide
-import com.credium.util.replaceFragment
 import com.credium.util.show
 import com.credium.wizard.ImportLoansWizardActivity
 import kotlinx.android.synthetic.main.fragment_loans.*
@@ -52,9 +52,9 @@ class LoansFragment : Fragment() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == RC_IMPORT_LOANS && resultCode == Activity.RESULT_OK) {
+        if (requestCode == RC_IMPORT_LOANS && resultCode == Activity.RESULT_OK)
             loansViewModel.loadLoans()
-        } else
+        else
             super.onActivityResult(requestCode, resultCode, data)
     }
 
@@ -62,10 +62,7 @@ class LoansFragment : Fragment() {
         noDataText.hide()
         loanList.adapter = LoansAdapter(loansViewModel.loans, object : LoansAdapter.OnClickListener {
             override fun onClick(loan: Loan) {
-                loansViewModel.selectedLoan = loan
-                // TODO: unlocked loan fragment
-                val detailsFragment = if (loan.isLocked) LockedLoanDetailsFragment() else Fragment()
-                activity?.replaceFragment(detailsFragment, id = R.id.containerFrame, addToBackStack = true)
+                LoanDetailsActivity.start(context!!, loan.id)
             }
         })
     }
