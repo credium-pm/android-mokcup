@@ -23,7 +23,7 @@ class ImportingLoansFragment : Fragment() {
         viewModel = ViewModelProviders.of(activity!!).get(ImportLoansViewModel::class.java)
         viewModel.importedLoansInfo.observe(this, Observer { info ->
             info?.let {
-                activity?.replaceFragment(LoansImportedFragment())
+                replaceFragment(LoansImportedFragment())
             }
         })
         viewModel.startImportingLoans()
