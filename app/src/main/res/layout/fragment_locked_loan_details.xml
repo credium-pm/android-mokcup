@@ -9,18 +9,30 @@
     <include
         android:id="@+id/include"
         layout="@layout/layout_loan_details"
+        app:layout_constraintBottom_toTopOf="@+id/loanStatusView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74" />
 
     <com.credium.views.LoanStatusView
         android:id="@+id/loanStatusView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/unlockLoanButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/unlockLoanButton"
+        style="@style/BlueGradientButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/unlock_loan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
