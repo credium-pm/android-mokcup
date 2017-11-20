@@ -15,7 +15,7 @@ import com.credium.data.Loan
 import com.credium.loandetails.LoanDetailsActivity
 import com.credium.util.hide
 import com.credium.util.show
-import com.credium.wizard.ImportLoansWizardActivity
+import com.credium.importloans.ImportLoansWizardActivity
 import kotlinx.android.synthetic.main.fragment_loans.*
 
 

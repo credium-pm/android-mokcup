@@ -31,7 +31,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name=".wizard.ImportLoansWizardActivity"
+            android:name=".importloans.ImportLoansWizardActivity"
             android:label="@string/import_loans"
             android:screenOrientation="portrait" />
 

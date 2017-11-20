@@ -1,4 +1,4 @@
-package com.credium.wizard
+package com.credium.importloans
 
 import android.Manifest
 import android.app.Activity
