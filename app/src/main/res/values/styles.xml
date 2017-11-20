@@ -61,6 +61,7 @@
     </style>
 
     <style name="ColoredButton">
+        <item name="android:layout_height">?android:attr/listPreferredItemHeight</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">16sp</item>

@@ -29,7 +29,6 @@
         android:id="@+id/unlockLoanButton"
         style="@style/BlueGradientButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/unlock_loan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
