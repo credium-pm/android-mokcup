@@ -22,8 +22,11 @@ fun AppCompatActivity.replaceFragment(fragment: Fragment,
     transaction.commit()
 }
 
-fun Activity.replaceFragment(fragment: Fragment, id: Int = android.R.id.content, addToBackStack: Boolean = false) {
-    (this as? AppCompatActivity)?.replaceFragment(fragment, id, addToBackStack)
+fun Activity.replaceFragment(fragment: Fragment,
+                             id: Int = android.R.id.content,
+                             addToBackStack: Boolean = false,
+                             animateReplace: Boolean = true) {
+    (this as? AppCompatActivity)?.replaceFragment(fragment, id, addToBackStack, animateReplace)
 }
 
 fun AppCompatActivity.setActionBarDrawable(drawable: Int) {

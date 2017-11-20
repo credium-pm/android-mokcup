@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#02a6fb</color>
-    <color name="colorPrimaryDark">#1276C5</color>
+    <color name="colorPrimary">#006ef9</color>
+    <color name="colorPrimaryDark">#0D5BC4</color>
     <color name="colorAccent">#02a6fb</color>
 
     <color name="defaultBg">#e9eef4</color>
@@ -16,7 +16,10 @@
 
     <color name="titleTextColor">#1c2a3c</color>
     <color name="descriptionTextColor">#1c2a3c</color>
-    
+
     <color name="inactiveControlColor">#a9b4c2</color>
     <color name="inactiveControlLightColor">#F6F8F9</color>
+
+    <color name="grayControlColor">#a8b4c1</color>
+    <color name="separatorColor">#C9D6E7</color>
 </resources>

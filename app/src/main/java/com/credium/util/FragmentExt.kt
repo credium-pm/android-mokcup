@@ -14,3 +14,14 @@ fun Fragment.setTitle(stringRes: Int) {
 }
 
 fun Fragment.getInt(name: String): Int? = arguments?.getInt(name)
+
+fun Fragment.replaceFragment(fragment: Fragment,
+                             id: Int = android.R.id.content,
+                             addToBackStack: Boolean = false,
+                             animateReplace: Boolean = true) {
+    activity?.replaceFragment(fragment, id, addToBackStack, animateReplace)
+}
+
+fun Fragment.goBack() {
+    activity?.onBackPressed()
+}

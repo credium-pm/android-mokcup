@@ -50,6 +50,13 @@
     <string name="importing_loans_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
     <string name="loan_details_static">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
     <string name="locked_loan_notes_description">You need to unlock this loan to sell its notes</string>
+    <string name="unlock">Unlock</string>
+    <string name="risk_score_description_static">%89 of loans with similar risk data were returned with no default</string>
+    <string name="risk_score_title">Risk Score:</string>
+    <string name="calculate_risk_button">Calculate Risk (5$)</string>
+    <string name="risk_model">Risk model</string>
+    <string name="risk_description_static">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="calculate_risk">Calculate Risk</string>
 
     <plurals name="loan_subtitle2">
         <item quantity="one">One month left</item>

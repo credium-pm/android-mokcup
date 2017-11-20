@@ -74,6 +74,14 @@
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
     </style>
 
+    <style name="BlueSolidButton" parent="ColoredButton">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="GraySolidButton" parent="ColoredButton">
+        <item name="android:background">@color/grayControlColor</item>
+    </style>
+
     <style name="BlueGradientButton" parent="ColoredButton">
         <item name="android:background">@drawable/bg_blue_gradient</item>
     </style>

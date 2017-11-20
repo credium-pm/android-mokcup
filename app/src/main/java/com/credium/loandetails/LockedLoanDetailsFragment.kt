@@ -44,5 +44,8 @@ class LockedLoanDetailsFragment : Fragment() {
             }
         }
 
+        unlockLoanButton.setOnClickListener {
+            replaceFragment(UnlockLoanFragment(), addToBackStack = true)
+        }
     }
 }
