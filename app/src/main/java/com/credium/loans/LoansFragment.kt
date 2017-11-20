@@ -64,7 +64,7 @@ class LoansFragment : Fragment() {
             override fun onClick(loan: Loan) {
                 loansViewModel.selectedLoan = loan
                 // TODO: unlocked loan fragment
-                val detailsFragment = if (loan.isLocked) LockedLoanDetails() else Fragment()
+                val detailsFragment = if (loan.isLocked) LockedLoanDetailsFragment() else Fragment()
                 activity?.replaceFragment(detailsFragment, id = R.id.containerFrame, addToBackStack = true)
             }
         })

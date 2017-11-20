@@ -6,12 +6,17 @@
 
     <color name="defaultBg">#e9eef4</color>
 
-    <color name="unlockedColor">#E4EFFD</color>
-    <color name="lockedColor">#F7E7E7</color>
+    <color name="unlockedBgColor">#E4EFFD</color>
+    <color name="lockedBgColor">#F7E7E7</color>
+    <color name="lockedColor">#b91e1e</color>
+    <color name="unlockedColor">#016df6</color>
 
-    <color name="colorLightBlue">#02a6fb</color>
-    <color name="colorDarkBlue">#016df6</color>
+    <color name="colorLightBlue">@color/colorAccent</color>
+    <color name="colorDarkBlue">@color/unlockedColor</color>
 
     <color name="titleTextColor">#1c2a3c</color>
     <color name="descriptionTextColor">#1c2a3c</color>
+    
+    <color name="inactiveControlColor">#a9b4c2</color>
+    <color name="inactiveControlLightColor">#F6F8F9</color>
 </resources>

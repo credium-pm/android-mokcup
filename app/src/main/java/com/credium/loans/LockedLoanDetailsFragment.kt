@@ -11,9 +11,10 @@ import com.credium.util.loanAmountText
 import com.credium.util.loanMonthsLeftDescription
 import com.credium.util.loanPerMonthDescription
 import kotlinx.android.synthetic.main.fragment_locked_loan_details.*
+import kotlinx.android.synthetic.main.layout_loan_details.*
 
 
-class LockedLoanDetails : Fragment() {
+class LockedLoanDetailsFragment : Fragment() {
 
     private lateinit var loansViewModel: LoansViewModel
 
@@ -27,6 +28,7 @@ class LockedLoanDetails : Fragment() {
             loanAmountTitleText.text = context?.loanAmountText(loan)
             val descriptionText = "${context?.loanPerMonthDescription(loan)}, ${context?.loanMonthsLeftDescription(loan)}"
             loanAmountDescriptionText.text = descriptionText
+            loanStatusView.isLocked = loan.isLocked
         }
     }
 }

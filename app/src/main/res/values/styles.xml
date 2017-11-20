@@ -38,14 +38,17 @@
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="LargeTitleText">
+    <style name="LargeTitleSpanText">
+        <item name="android:textColor">@color/titleTextColor</item>
+        <item name="android:textSize">@dimen/titleTextSize</item>
+    </style>
+
+    <style name="LargeTitleText" parent="LargeTitleSpanText">
         <item name="android:layout_marginEnd">@dimen/margin_default</item>
         <item name="android:layout_marginStart">@dimen/margin_default</item>
         <item name="android:layout_marginLeft">@dimen/margin_default</item>
         <item name="android:layout_marginRight">@dimen/margin_default</item>
         <item name="android:layout_marginTop">@dimen/margin_large</item>
-        <item name="android:textColor">@color/titleTextColor</item>
-        <item name="android:textSize">@dimen/titleTextSize</item>
     </style>
 
     <style name="DescriptionText">
