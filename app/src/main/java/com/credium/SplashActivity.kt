@@ -17,9 +17,8 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // TODO: do expensive work in ViewModel?
         job = launch(UI) {
-            delay(500L)
+            delay(1000L)
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             finish()
         }

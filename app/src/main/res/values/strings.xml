@@ -20,6 +20,9 @@
     <string name="no_loans">Nothing here. Import some loans.</string>
     <string name="import_loans">Import Loans</string>
     <string name="enable_camera_permission">Please enable camera permission</string>
+    <string name="loading">Loading...</string>
+    <string name="splash_version">v0.4.1</string>
+    <string name="splash_version_date">Nov 19, 2017</string>
     <plurals name="loan_subtitle2">
         <item quantity="one">One month left</item>
         <item quantity="other">%d months left</item>
