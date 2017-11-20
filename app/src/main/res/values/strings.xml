@@ -13,6 +13,7 @@
     <string name="locked">Locked</string>
     <string name="unlocked">Unlocked</string>
     <string name="done">Done</string>
+    <string name="next">Next</string>
     <string name="back">Back</string>
     <string name="details">Details</string>
     <string name="import_loans">Import Loans</string>
