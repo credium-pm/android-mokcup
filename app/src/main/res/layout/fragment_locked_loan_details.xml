@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultBg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/loanAmountTitleText"
+        style="@style/LargeTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="1000 USD" />
+
+    <TextView
+        android:id="@+id/loanAmountDescriptionText"
+        style="@style/DescriptionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="50 USD per month, 20 months left" />
+
+    <TextView
+        style="@style/LargeTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/details" />
+
+    <TextView
+        android:id="@+id/detailsDescriptionText"
+        style="@style/DescriptionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loan_details_static" />
+
+    <TextView
+        style="@style/LargeTitleText"
+        android:text="@string/notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        style="@style/DescriptionText"
+        android:text="@string/locked_loan_notes_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

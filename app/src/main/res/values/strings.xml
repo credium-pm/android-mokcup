@@ -22,9 +22,10 @@
     <string name="unlocked">Unlocked</string>
     <string name="done">Done</string>
     <string name="back">Back</string>
+    <string name="details">Details</string>
     <string name="import_loans">Import Loans</string>
 
-    <string name="unlocked_loan_template_title">%1$s %2$s</string>
+    <string name="amount_and_currency_template">%1$s %2$s</string>
     <string name="locked_loan_template_title">%1$s %2$s (Locked)</string>
 
     <string name="loan_subtitle1">%1$s %2$s per month</string>
@@ -39,6 +40,9 @@
     <string name="import_loans_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
     <string name="importing_loans_title">Importing loans…</string>
     <string name="importing_loans_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="loan_details_static">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="locked_loan_notes_description">You need to unlock this loan to sell its notes</string>
+
 
     <plurals name="loan_subtitle2">
         <item quantity="one">One month left</item>

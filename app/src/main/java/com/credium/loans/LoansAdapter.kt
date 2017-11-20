@@ -11,6 +11,8 @@ import com.credium.R
 import com.credium.data.Loan
 import com.credium.data.UnlockedLoan
 import com.credium.util.bindView
+import com.credium.util.loanMonthsLeftDescription
+import com.credium.util.loanPerMonthDescription
 
 
 class LoansAdapter(
@@ -57,12 +59,12 @@ class LoansAdapter(
         fun bind(loan: Loan) {
             val context = titleText.context
             val drawableResource = if (loan.isLocked) R.drawable.ic_circle_locked else R.drawable.ic_circle_unlocked
-            val stringResource = if (loan.isLocked) R.string.locked_loan_template_title else R.string.unlocked_loan_template_title
+            val stringResource = if (loan.isLocked) R.string.locked_loan_template_title else R.string.amount_and_currency_template
 
             iconImage.setImageDrawable(ContextCompat.getDrawable(context, drawableResource))
             titleText.text = context.getString(stringResource, loan.amount.toString(), loan.currency.label)
-            text1.text = context.getString(R.string.loan_subtitle1, loan.amountPerMonth.toString(), loan.currency.label)
-            text2.text = context.resources.getQuantityString(R.plurals.loan_subtitle2, loan.months, loan.months)
+            text1.text = context.loanPerMonthDescription(loan)
+            text2.text = context.loanMonthsLeftDescription(loan)
             if (loan is UnlockedLoan) {
                 // TODO: set colors
                 text3.text = context.resources.getString(
