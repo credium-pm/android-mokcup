@@ -10,7 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.credium.R
-import com.credium.util.getInt
+import com.credium.util.goBack
 import com.credium.util.show
 import kotlinx.android.synthetic.main.fragment_imported_loans_info.*
 
@@ -36,7 +36,7 @@ class LoansImportedFragment : Fragment() {
 
         backButton.setOnClickListener {
             viewModel.clearLoans()
-            activity?.onBackPressed()
+            goBack()
         }
         doneButton.setOnClickListener {
             viewModel.saveLoans()

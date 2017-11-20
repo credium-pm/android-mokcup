@@ -46,7 +46,7 @@ class SelectPlatformFragment : Fragment() {
         }
 
         backButton.setOnClickListener {
-            activity?.onBackPressed()
+            goBack()
         }
 
         nextButton.setOnClickListener {
