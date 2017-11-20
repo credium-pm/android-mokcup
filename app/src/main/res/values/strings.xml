@@ -36,6 +36,8 @@
     <string name="locked_loan_template_title">%1$s %2$s (Locked)</string>
     <string name="loan_subtitle1">%1$s %2$s per month</string>
     <string name="loan_pending">%1$s %2$s note pending sell for %3$s %4$s</string>
+    <string name="loans_imported_template">%1$s loans imported</string>
+    <string name="loans_imported_total_value_template">Total value is %1$s %2$s</string>
 
     <!-- Static text -->
     <string name="enable_camera_permission">Please enable camera permission</string>
@@ -43,8 +45,6 @@
     <string name="splash_version_date">Nov 19, 2017</string>
     <string name="import_loans_title">Import loans from the following lending platform</string>
     <string name="loans_imported_successfully">Loans imported successfully</string>
-    <string name="loans_imported_static">3 loans imported</string>
-    <string name="loans_imported_total_value_static">Total value is $4,600</string>
     <string name="import_loans_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
     <string name="importing_loans_title">Importing loans…</string>
     <string name="importing_loans_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>

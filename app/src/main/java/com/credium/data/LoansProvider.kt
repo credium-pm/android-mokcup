@@ -1,17 +1,18 @@
 package com.credium.data
 
+import android.arch.lifecycle.LiveData
+import android.arch.lifecycle.MutableLiveData
+
 
 object LoansProvider {
 
-    private val loans by lazy {
-        mutableListOf<Loan>(
-                LockedLoan(id = 1, currency = DollarUsaCurrency, amount = 1000, amountPerMonth = 50, months = 12),
-                LockedLoan(id = 2, currency = DollarUsaCurrency, amount = 1500, amountPerMonth = 150, months = 10),
-                LockedLoan(id = 3, currency = DollarUsaCurrency, amount = 2100, amountPerMonth = 300, months = 7)
-        )
+    private val loans = MutableLiveData<List<Loan>>()
+
+    fun addLoans(loans: List<Loan>) {
+        this.loans.value = loans
     }
 
-    fun fetchLoans(): MutableList<Loan> = loans
+    fun getLoans(): LiveData<List<Loan>> = loans
 
-    fun getLoan(id: Int): Loan? = loans.firstOrNull { it.id == id }
+    fun getLoan(id: Int): Loan? = loans.value?.firstOrNull { it.id == id }
 }

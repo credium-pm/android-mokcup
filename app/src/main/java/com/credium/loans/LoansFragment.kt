@@ -12,10 +12,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.credium.R
 import com.credium.data.Loan
+import com.credium.importloans.ImportLoansWizardActivity
 import com.credium.loandetails.LoanDetailsActivity
 import com.credium.util.hide
 import com.credium.util.show
-import com.credium.importloans.ImportLoansWizardActivity
 import kotlinx.android.synthetic.main.fragment_loans.*
 
 
@@ -34,13 +34,13 @@ class LoansFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        loansViewModel = ViewModelProviders.of(activity!!).get(LoansViewModel::class.java)
 
         fab.setOnClickListener {
             startActivityForResult(Intent(this@LoansFragment.context, ImportLoansWizardActivity::class.java), RC_IMPORT_LOANS)
         }
         loanList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
+        loansViewModel = ViewModelProviders.of(activity!!).get(LoansViewModel::class.java)
         loansViewModel.loansLiveData.observe(this, Observer {
             showLoans()
         })

@@ -1,6 +1,5 @@
 package com.credium.loans
 
-import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.credium.data.Loan
 import com.credium.data.LoansProvider
@@ -8,13 +7,10 @@ import com.credium.data.LoansProvider
 
 class LoansViewModel : ViewModel() {
 
-    // TODO: load from somewhere
-    var loansLiveData = MutableLiveData<List<Loan>>()
-    var loans: MutableList<Loan> = mutableListOf()
+    val loansLiveData = LoansProvider.getLoans()
+    var loans: List<Loan> = listOf()
 
     fun loadLoans() {
-        val newLoans = LoansProvider.fetchLoans()
-        loansLiveData.postValue(newLoans)
-        loans = newLoans
+        loans = LoansProvider.getLoans().value ?: emptyList()
     }
 }
