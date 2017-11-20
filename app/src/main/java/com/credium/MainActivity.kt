@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import com.credium.dashboard.DashboardFragment
 import com.credium.loans.LoansFragment
 import com.credium.loans.LoansViewModel
 import com.credium.settings.SettingsActivity
@@ -38,9 +39,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, SettingsActivity::class.java))
             else {
                 val (fragment, titleStringResource) = when (item.itemId) {
-                    R.id.navDashboard -> Fragment() to R.string.dashboard
+                    R.id.navDashboard -> DashboardFragment() to R.string.dashboard
                     R.id.navNotes -> Fragment() to R.string.notes
                     R.id.navLoans -> LoansFragment() to R.string.loans
+                    R.id.navResetMockup -> return@setNavigationItemSelectedListener true
                     else -> throw RuntimeException("No handler for item id: ${item.itemId}")
                 }
                 replaceFragment(fragment, R.id.containerFrame)
