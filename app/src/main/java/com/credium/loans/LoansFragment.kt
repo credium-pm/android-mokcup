@@ -34,36 +34,39 @@ class LoansFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         fab.setOnClickListener {
             startActivityForResult(Intent(this@LoansFragment.context, ImportLoansWizardActivity::class.java), RC_IMPORT_LOANS)
         }
         loanList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
         loansViewModel = ViewModelProviders.of(activity!!).get(LoansViewModel::class.java)
-        loansViewModel.loansLiveData.observe(this, Observer {
-            showLoans()
-        })
-
-        if (loansViewModel.loans.isEmpty())
-            noDataText.show()
-        else
-            showLoans()
+        loansViewModel.loadLoans()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == RC_IMPORT_LOANS && resultCode == Activity.RESULT_OK)
+        if (requestCode == RC_IMPORT_LOANS && resultCode == Activity.RESULT_OK) {
             loansViewModel.loadLoans()
-        else
+            showLoans()
+        } else
             super.onActivityResult(requestCode, resultCode, data)
     }
 
     private fun showLoans() {
-        noDataText.hide()
-        loanList.adapter = LoansAdapter(loansViewModel.loans, object : LoansAdapter.OnClickListener {
-            override fun onClick(loan: Loan) {
-                LoanDetailsActivity.start(context!!, loan.id)
-            }
-        })
+        if (loansViewModel.loans.isEmpty())
+            noDataText.show()
+        else {
+            noDataText.hide()
+            loanList.adapter = LoansAdapter(loansViewModel.loans, object : LoansAdapter.OnClickListener {
+                override fun onClick(loan: Loan) {
+                    LoanDetailsActivity.start(context!!, loan.id)
+                }
+            })
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        loansViewModel.loadLoans()
+        showLoans()
     }
 }

@@ -1,18 +1,15 @@
 package com.credium.data
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-
 
 object LoansProvider {
 
-    private val loans = MutableLiveData<List<Loan>>()
+    private val loans = mutableListOf<Loan>()
 
     fun addLoans(loans: List<Loan>) {
-        this.loans.value = loans
+        this.loans.addAll(loans)
     }
 
-    fun getLoans(): LiveData<List<Loan>> = loans
+    fun getLoans(): List<Loan> = loans
 
-    fun getLoan(id: Int): Loan? = loans.value?.firstOrNull { it.id == id }
+    fun getLoan(id: Int): Loan? = loans.firstOrNull { it.id == id }
 }

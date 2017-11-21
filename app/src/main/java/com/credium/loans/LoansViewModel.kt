@@ -7,10 +7,10 @@ import com.credium.data.LoansProvider
 
 class LoansViewModel : ViewModel() {
 
-    val loansLiveData = LoansProvider.getLoans()
     var loans: List<Loan> = listOf()
 
-    fun loadLoans() {
-        loans = LoansProvider.getLoans().value ?: emptyList()
+    fun loadLoans(): List<Loan> {
+        loans = LoansProvider.getLoans()
+        return loans
     }
 }

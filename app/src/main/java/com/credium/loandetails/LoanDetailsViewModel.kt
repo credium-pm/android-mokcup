@@ -15,4 +15,12 @@ class LoanDetailsViewModel : ViewModel() {
         selectedLoan = LoansProvider.getLoan(id)
         return selectedLoan
     }
+
+    fun unlockSelected() {
+        selectedLoan?.let { loan ->
+            LoansProvider.getLoans()
+                    .first { it.id == loan.id }
+                    .apply { isLocked = false }
+        }
+    }
 }
