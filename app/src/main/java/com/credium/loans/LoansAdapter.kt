@@ -11,6 +11,7 @@ import com.credium.R
 import com.credium.data.Loan
 import com.credium.data.UnlockedLoan
 import com.credium.util.bindView
+import com.credium.util.getColoredString
 import com.credium.util.loanMonthsLeftDescription
 import com.credium.util.loanPerMonthDescription
 
@@ -67,13 +68,11 @@ class LoansAdapter(
             text2.text = context.loanMonthsLeftDescription(loan)
             if (loan is UnlockedLoan) {
                 // TODO: set colors
-                text3.text = context.resources.getString(
-                        R.string.loan_pending,
-                        loan.pendingAmount.toString(),
-                        loan.currency.label,
-                        loan.sellFor.toString(),
-                        loan.currency.label
-                )
+                val amount = "${loan.pendingAmount} ${loan.currency.label}"
+                val sellFor = "${loan.sellFor} ${loan.currency.label}"
+                val line = context.resources.getString(R.string.loan_pending, amount, sellFor)
+                val colored = context.getColoredString(line, mapOf(amount to R.color.colorPrimary, sellFor to R.color.cashTitleColor))
+                text3.text = colored
             }
         }
     }

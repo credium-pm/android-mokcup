@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.credium.R
+import com.credium.util.getBoldSpanString
 import com.credium.util.goBack
 import com.credium.util.show
 import kotlinx.android.synthetic.main.fragment_imported_loans_info.*
@@ -30,7 +31,9 @@ class LoansImportedFragment : Fragment() {
         val loansInfo = viewModel.importedLoansInfo.value!!
 
         numberImportedLoansText.text = getString(R.string.loans_imported_template, loansInfo.loanCount.toString())
-        totalAmountText.text = getString(R.string.loans_imported_total_value_template, loansInfo.totalAmount.toString(), loansInfo.currency)
+        val amount = "${loansInfo.totalAmount} ${loansInfo.currency}"
+        val line = getString(R.string.loans_imported_total_value_template, amount)
+        totalAmountText.text = getBoldSpanString(line, amount)
 
         animateText()
 

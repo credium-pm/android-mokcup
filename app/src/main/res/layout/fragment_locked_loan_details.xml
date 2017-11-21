@@ -27,7 +27,7 @@
 
     <Button
         android:id="@+id/unlockLoanButton"
-        style="@style/BlueGradientButton"
+        style="@style/BlueSolidButton"
         android:layout_width="0dp"
         android:text="@string/unlock_loan"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -69,7 +69,7 @@
 
     <Button
         android:id="@+id/doneButton"
-        style="@style/BlueGradientButton"
+        style="@style/BlueSolidButton"
         android:layout_width="0dp"
         android:text="@string/done"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -79,7 +79,7 @@
 
     <Button
         android:id="@+id/backButton"
-        style="@style/GrayGradientButton"
+        style="@style/GraySolidButton"
         android:layout_width="0dp"
         android:text="@string/back"
         app:layout_constraintBottom_toBottomOf="parent"
