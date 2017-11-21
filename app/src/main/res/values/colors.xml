@@ -22,4 +22,5 @@
 
     <color name="grayControlColor">#a8b4c1</color>
     <color name="separatorColor">#C9D6E7</color>
+    <color name="darkGrayColor">#707b88</color>
 </resources>

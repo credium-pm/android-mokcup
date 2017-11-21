@@ -75,7 +75,7 @@
     </style>
 
     <style name="BlueSolidButton" parent="ColoredButton">
-        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:background">@drawable/selector_blue_button</item>
     </style>
 
     <style name="GraySolidButton" parent="ColoredButton">
@@ -88,6 +88,13 @@
 
     <style name="GrayGradientButton" parent="ColoredButton">
         <item name="android:background">@drawable/bg_gray_gradient</item>
+    </style>
+
+    <style name="RiskPercentageText">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/darkGrayColor</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
 </resources>

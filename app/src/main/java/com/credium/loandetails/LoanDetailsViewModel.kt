@@ -9,6 +9,10 @@ class LoanDetailsViewModel : ViewModel() {
 
     // TODO: use live data to notify updates
 
-    fun loadLoan(id: Int): Loan? =
-            LoansProvider.getLoan(id)
+    var selectedLoan: Loan? = null
+
+    fun loadLoan(id: Int): Loan? {
+        selectedLoan = LoansProvider.getLoan(id)
+        return selectedLoan
+    }
 }

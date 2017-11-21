@@ -58,6 +58,7 @@
     <string name="risk_model">Risk model</string>
     <string name="risk_description_static">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
     <string name="calculate_risk">Calculate Risk</string>
+    <string name="risk_percentage_static">89%</string>
 
     <plurals name="loan_subtitle2">
         <item quantity="one">One month left</item>
