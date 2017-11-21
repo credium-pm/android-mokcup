@@ -36,8 +36,7 @@ class LoanDetailsViewModel : ViewModel() {
                     pendingAmount,
                     sellFor
             )
-            LoansProvider.deleteLoan(loan.id)
-            LoansProvider.addLoan(unlockedLoan)
+            LoansProvider.replaceLoan(loan.id, unlockedLoan)
         }
     }
 }
