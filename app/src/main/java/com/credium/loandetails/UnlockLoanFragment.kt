@@ -46,7 +46,7 @@ class UnlockLoanFragment : Fragment() {
             goBack()
         }
         unlockButton.setOnClickListener {
-            //replaceFragment(UnlockedLoanFragment())
+            //replaceFragment(SellNoteFragment())
             viewModel.unlockSelected()
             activity?.finish()
         }

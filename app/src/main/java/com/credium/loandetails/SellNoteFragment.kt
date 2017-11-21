@@ -9,16 +9,16 @@ import android.view.ViewGroup
 import com.credium.R
 import com.credium.util.getInt
 import com.credium.util.loanAmountText
-import kotlinx.android.synthetic.main.fragment_unlocked_loan.*
+import kotlinx.android.synthetic.main.fragment_sell_note.*
 
 
-class UnlockedLoanFragment : Fragment() {
+class SellNoteFragment : Fragment() {
 
     companion object {
         private const val ARG_LOAN_ID = "arg_loan_id"
 
-        fun newInstance(loanId: Int): UnlockedLoanFragment {
-            return UnlockedLoanFragment().apply {
+        fun newInstance(loanId: Int): SellNoteFragment {
+            return SellNoteFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_LOAN_ID, loanId)
                 }
@@ -27,14 +27,14 @@ class UnlockedLoanFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-            inflater.inflate(R.layout.fragment_unlocked_loan, container, false)
+            inflater.inflate(R.layout.fragment_sell_note, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val viewModel = ViewModelProviders.of(activity!!).get(LoanDetailsViewModel::class.java)
 
-        getInt(UnlockedLoanFragment.ARG_LOAN_ID)?.let { id ->
+        getInt(SellNoteFragment.ARG_LOAN_ID)?.let { id ->
             viewModel.loadLoan(id)?.let { loan ->
                 amountText.text = context?.loanAmountText(loan)
             }

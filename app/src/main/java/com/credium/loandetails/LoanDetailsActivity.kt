@@ -32,7 +32,7 @@ class LoanDetailsActivity : BaseSubActivity() {
                 if (loan.isLocked)
                     replaceFragment(LockedLoanDetailsFragment.newInstance(loan.id), animateReplace = false)
                 else
-                    replaceFragment(UnlockedLoanFragment.newInstance(loan.id), animateReplace = false)
+                    replaceFragment(SellNoteFragment.newInstance(loan.id), animateReplace = false)
             }
         }
     }
