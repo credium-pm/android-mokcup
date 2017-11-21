@@ -21,6 +21,7 @@
     <string name="cash">Cash</string>
     <string name="unlock_loan">Unlock Loan</string>
     <string name="loading">Loading…</string>
+    <string name="scan_barcode_prompt">Scan a barcode</string>
 
     <!-- Empty states -->
     <string name="coming_soon">Coming soon</string>

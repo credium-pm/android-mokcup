@@ -36,6 +36,13 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".importloans.CaptureActivityPortrait"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
             android:name=".loandetails.LoanDetailsActivity"
             android:label="@string/loan"
             android:screenOrientation="portrait" />
