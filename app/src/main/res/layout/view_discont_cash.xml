@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_default"
+    android:paddingTop="@dimen/margin_default">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/discountTextView"
+            style="@style/AccentDarkLargeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="25%"
+            android:textAlignment="center"
+            tools:text="25%" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/DescriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/discount"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_chevron_right" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cashTextView"
+            style="@style/AccentDarkLargeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$450"
+            android:textAlignment="center"
+            android:textColor="@color/cashTitleColor"
+            tools:text="$450" />
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/DescriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cash"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

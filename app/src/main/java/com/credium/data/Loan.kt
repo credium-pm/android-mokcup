@@ -21,6 +21,6 @@ class UnlockedLoan(id: Int,
                    amount: Int,
                    amountPerMonth: Int,
                    months: Int,
-                   val pendingAmount: Int,
-                   val sellFor: Int
+                   var pendingAmount: Int = 0,
+                   var sellFor: Int = 0
 ) : Loan(id, currency, amount, amountPerMonth, months, isLocked = false)

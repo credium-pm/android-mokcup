@@ -59,6 +59,12 @@
     <string name="risk_description_static">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
     <string name="calculate_risk">Calculate Risk</string>
     <string name="risk_percentage_static">89%</string>
+    <string name="of">of</string>
+    <string name="how_much_would_you_like_to_sell">How much would you like to sell?</string>
+    <string name="discount">Discount</string>
+    <string name="what_discount_markup_would_you_like_to_set">What discount/markup would you like to set?</string>
+    <string name="loans_with_same_data_that_were_sold_within_a_week">Loans with same data that were sold within a week:</string>
+    <string name="submit_sell_order">Submit Sell Order</string>
 
     <plurals name="loan_subtitle2">
         <item quantity="one">One month left</item>
