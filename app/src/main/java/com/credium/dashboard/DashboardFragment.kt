@@ -7,10 +7,25 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import android.view.*
 import com.credium.R
+import com.credium.util.debug
 import kotlinx.android.synthetic.main.fragment_notes_main.*
 
 
 class DashboardFragment : Fragment() {
+
+    private val fragments by lazy { listOf(CashFlowFragment(), LoansDashboardFragment(), RiskManagementFragment()) }
+
+    private val onTabSelectedListener = object : TabLayout.OnTabSelectedListener {
+        override fun onTabReselected(tab: TabLayout.Tab?) {
+            tab?.position?.let { (fragments[it] as? OnSelectListener)?.onSelected() }
+        }
+
+        override fun onTabUnselected(tab: TabLayout.Tab?) = Unit
+
+        override fun onTabSelected(tab: TabLayout.Tab?) {
+            tab?.position?.let { (fragments[it] as? OnSelectListener)?.onSelected() }
+        }
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
             inflater.inflate(R.layout.fragment_dashboard, container, false)
@@ -21,8 +36,15 @@ class DashboardFragment : Fragment() {
         viewPager.adapter = SectionsPagerAdapter(activity!!.supportFragmentManager)
 
         activity?.findViewById<TabLayout>(R.id.tabs)?.apply {
+            viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(this))
             setupWithViewPager(viewPager)
+            addOnTabSelectedListener(onTabSelectedListener)
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        activity?.findViewById<TabLayout>(R.id.tabs)?.removeOnTabSelectedListener(onTabSelectedListener)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
@@ -30,8 +52,6 @@ class DashboardFragment : Fragment() {
     }
 
     private inner class SectionsPagerAdapter(fragmentManager: FragmentManager) : FragmentStatePagerAdapter(fragmentManager) {
-
-        private val fragments by lazy { listOf(CashFlowFragment(), LoansDashboardFragment(), RiskManagementFragment()) }
 
         private val titles by lazy {
             listOf(
@@ -45,7 +65,7 @@ class DashboardFragment : Fragment() {
 
         override fun getItem(position: Int): Fragment = fragments[position]
 
-        override fun getCount(): Int = 3
+        override fun getCount(): Int = fragments.size
     }
 
     interface OnSelectListener {

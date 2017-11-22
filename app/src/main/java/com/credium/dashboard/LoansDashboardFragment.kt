@@ -21,6 +21,9 @@ import kotlinx.android.synthetic.main.fragment_loans_dashboard.*
 
 class LoansDashboardFragment : Fragment(), DashboardFragment.OnSelectListener {
 
+    private lateinit var pieDataSet: PieDataSet
+    private lateinit var styledString: SpannableString
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
             inflater.inflate(R.layout.fragment_loans_dashboard, container, false)
 
@@ -28,7 +31,7 @@ class LoansDashboardFragment : Fragment(), DashboardFragment.OnSelectListener {
         super.onViewCreated(view, savedInstanceState)
 
         val titleColor = ResourcesCompat.getColor(resources, R.color.darkGrayColor, context!!.theme)
-        val styledString = SpannableString("Loans\n23").apply {
+        styledString = SpannableString("Loans\n23").apply {
             setSpan(ForegroundColorSpan(titleColor), 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
             setSpan(RelativeSizeSpan(1.5f), 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
             setSpan(StyleSpan(Typeface.BOLD), 5, 8, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
@@ -43,7 +46,7 @@ class LoansDashboardFragment : Fragment(), DashboardFragment.OnSelectListener {
         ).map { ResourcesCompat.getColor(resources, it, context!!.theme) }
 
         val entries = listOf(12f, 6f, 3f, 2f).map { PieEntry(it) }
-        val pieDataSet = PieDataSet(entries, "").apply {
+        pieDataSet = PieDataSet(entries, "").apply {
             sliceSpace = 0f
             valueLineWidth = 10f
             formLineWidth = 50f
@@ -51,7 +54,9 @@ class LoansDashboardFragment : Fragment(), DashboardFragment.OnSelectListener {
             setDrawValues(false)
             this.colors = colors
         }
+    }
 
+    override fun onSelected() {
         pieChart.apply {
             data = PieData(pieDataSet)
             highlightValues(null)
@@ -60,12 +65,9 @@ class LoansDashboardFragment : Fragment(), DashboardFragment.OnSelectListener {
             setTouchEnabled(false)
             holeRadius = 60f
             centerText = styledString
-            animateXY(2000, 2000)
+            animateXY(1000, 1000)
+            invalidate()
         }
-    }
-
-    override fun onSelected() {
-        pieChart.invalidate()
     }
 
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
