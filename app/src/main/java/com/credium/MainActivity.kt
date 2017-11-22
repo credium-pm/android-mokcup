@@ -8,8 +8,11 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import com.credium.dashboard.DashboardFragment
 import com.credium.loans.LoansFragment
+import com.credium.notes.NotesFragment
 import com.credium.settings.SettingsActivity
+import com.credium.util.gone
 import com.credium.util.replaceFragment
+import com.credium.util.show
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -31,9 +34,11 @@ class MainActivity : AppCompatActivity() {
             if (item.itemId == R.id.navSettings)
                 startActivity(Intent(this, SettingsActivity::class.java))
             else {
+                if (item.itemId == R.id.navNotes) tabs.show() else tabs.gone()
+
                 val (fragment, titleStringResource) = when (item.itemId) {
                     R.id.navDashboard -> DashboardFragment() to R.string.dashboard
-                    R.id.navNotes -> Fragment() to R.string.notes
+                    R.id.navNotes -> NotesFragment() to R.string.notes
                     R.id.navLoans -> LoansFragment() to R.string.loans
                     R.id.navResetMockup -> return@setNavigationItemSelectedListener true
                     else -> throw RuntimeException("No handler for item id: ${item.itemId}")

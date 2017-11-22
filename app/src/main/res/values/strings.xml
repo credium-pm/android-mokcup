@@ -65,6 +65,7 @@
     <string name="what_discount_markup_would_you_like_to_set">What discount/markup would you like to set?</string>
     <string name="loans_with_same_data_that_were_sold_within_a_week">Loans with same data that were sold within a week:</string>
     <string name="submit_sell_order">Submit Sell Order</string>
+    <string name="sell_orders">Sell orders</string>
 
     <plurals name="loan_subtitle2">
         <item quantity="one">One month left</item>
