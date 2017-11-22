@@ -1,59 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/defaultBg">
+    android:background="@color/defaultBg"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/margin_default">
+        android:orientation="vertical">
 
-        <TextView
-            style="@style/LargeTitleText"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_default"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:text="@string/value" />
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_default">
 
-        <com.github.mikephil.charting.charts.HorizontalBarChart
-            android:id="@+id/valueChart"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="@dimen/margin_small" />
+            <TextView
+                style="@style/LargeTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/value" />
 
-        <com.credium.views.ChartDescriptionView
+            <com.github.mikephil.charting.charts.HorizontalBarChart
+                android:id="@+id/valueChart"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="@dimen/margin_small" />
+
+            <com.credium.views.ChartDescriptionView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_small"
+                app:radioImage="@drawable/ic_radio_blue"
+                app:subTitle="820 USD"
+                app:title="Holdings" />
+
+            <com.credium.views.ChartDescriptionView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_small"
+                app:radioImage="@drawable/ic_radio_gray"
+                app:subTitle="110 USD"
+                app:title="Monthly Payout" />
+
+            <com.credium.views.ChartDescriptionView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                app:radioImage="@drawable/ic_radio_green"
+                app:subTitle="309 USD"
+                app:title="Current Cash" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_default"
-            android:layout_marginTop="@dimen/margin_small"
-            app:radioImage="@drawable/ic_radio_blue"
-            app:subTitle="820 USD"
-            app:title="Holdings" />
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_default"
+            android:background="@android:color/white"
+            android:orientation="vertical">
 
-        <com.credium.views.ChartDescriptionView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_default"
-            android:layout_marginTop="@dimen/margin_small"
-            app:radioImage="@drawable/ic_radio_gray"
-            app:subTitle="110 USD"
-            app:title="Monthly Payout" />
+            <TextView
+                style="@style/LargeTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/payout_forecast" />
 
-        <com.credium.views.ChartDescriptionView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_default"
-            app:radioImage="@drawable/ic_radio_green"
-            app:subTitle="309 USD"
-            app:title="Current Cash" />
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/payoutForecast"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+
+</ScrollView>
