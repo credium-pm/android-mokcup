@@ -1,6 +1,14 @@
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+
+static def getDateTime() {
+    DateFormat df = new SimpleDateFormat("YYYY-MM-dd_HH.mm")
+    return df.format(new Date())
+}
 
 android {
     compileSdkVersion 27
@@ -13,6 +21,11 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        android.applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                output.outputFileName = new File("debug-" + getDateTime() + ".apk")
+            }
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
