@@ -39,7 +39,7 @@ class DashboardFragment : Fragment() {
                     getString(R.string.risk_management)
             )
         }
-        private val fragments by lazy { listOf(Fragment(), Fragment(), Fragment()) }
+        private val fragments by lazy { listOf(CashFlowFragment(), Fragment(), Fragment()) }
 
         override fun getPageTitle(position: Int): CharSequence? = titles[position]
 
