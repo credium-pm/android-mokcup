@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             if (item.itemId == R.id.navSettings)
                 startActivity(Intent(this, SettingsActivity::class.java))
             else {
-                if (item.itemId == R.id.navNotes) tabs.show() else tabs.gone()
+                if (item.itemId in listOf(R.id.navNotes, R.id.navDashboard)) tabs.show() else tabs.gone()
 
                 val (fragment, titleStringResource) = when (item.itemId) {
                     R.id.navDashboard -> DashboardFragment() to R.string.dashboard
