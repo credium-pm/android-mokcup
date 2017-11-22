@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center">
+        <shape android:shape="oval">
+            <solid android:color="@color/chartColorBlue" />
+            <size
+                android:width="@dimen/radioOuterCircleSize"
+                android:height="@dimen/radioOuterCircleSize" />
+        </shape>
+    </item>
+    <item android:gravity="center">
+        <shape android:shape="oval">
+            <padding
+                android:bottom="@dimen/radioInnerCirclePadding"
+                android:left="@dimen/radioInnerCirclePadding"
+                android:right="@dimen/radioInnerCirclePadding"
+                android:top="@dimen/radioInnerCirclePadding" />
+            <solid android:color="@android:color/white" />
+            <size
+                android:width="@dimen/radioInnerCircleSize"
+                android:height="@dimen/radioInnerCircleSize" />
+        </shape>
+    </item>
+</layer-list>

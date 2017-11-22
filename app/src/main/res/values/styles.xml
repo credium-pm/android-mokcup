@@ -118,4 +118,31 @@
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
+    <style name="ChartDescriptionTitleText">
+        <item name="android:textColor">@color/titleTextColor</item>
+        <item name="android:textSize">@dimen/textSize_16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ChartDescriptionSubTitleText">
+        <item name="android:textColor">@color/descriptionTextColor</item>
+        <item name="android:textSize">@dimen/textSize_13sp</item>
+    </style>
+
+    <style name="RedRadio">
+        <item name="radioImage">@drawable/ic_radio_red</item>
+    </style>
+
+    <style name="BlueRadio">
+        <item name="radioImage">@drawable/ic_radio_blue</item>
+    </style>
+
+    <style name="GreenRadio">
+        <item name="radioImage">@drawable/ic_radio_green</item>
+    </style>
+
+    <style name="GrayRadio">
+        <item name="radioImage">@drawable/ic_radio_gray</item>
+    </style>
+
 </resources>

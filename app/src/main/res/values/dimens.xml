@@ -18,7 +18,12 @@
 
     <dimen name="descriptionMediumTextSize">16sp</dimen>
 
+    <dimen name="textSize_13sp">13sp</dimen>
     <dimen name="textSize_14sp">14sp</dimen>
     <dimen name="textSize_16sp">16sp</dimen>
     <dimen name="textSize_20sp">20sp</dimen>
+
+    <dimen name="radioOuterCircleSize">20dp</dimen>
+    <dimen name="radioInnerCirclePadding">3dp</dimen>
+    <dimen name="radioInnerCircleSize">7dp</dimen>
 </resources>
