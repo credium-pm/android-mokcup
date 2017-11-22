@@ -55,6 +55,8 @@ dependencies {
 
     implementation "com.journeyapps:zxing-android-embedded:$zxingVersion"
 
+    implementation "com.github.PhilJay:MPAndroidChart:v3.0.2"
+
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "com.android.support.test:runner:$testRunnerVersion"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCore"

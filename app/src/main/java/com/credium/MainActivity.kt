@@ -49,8 +49,8 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-        navigationView.menu.performIdentifierAction(R.id.navLoans, 0)
-        navigationView.setCheckedItem(R.id.navLoans)
+        navigationView.menu.performIdentifierAction(R.id.navDashboard, 0)
+        navigationView.setCheckedItem(R.id.navDashboard)
     }
 
     override fun onBackPressed() {

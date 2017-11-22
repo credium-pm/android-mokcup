@@ -12,8 +12,6 @@ import kotlinx.android.synthetic.main.fragment_notes_main.*
 
 class DashboardFragment : Fragment() {
 
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
             inflater.inflate(R.layout.fragment_dashboard, container, false)
 
@@ -22,15 +20,18 @@ class DashboardFragment : Fragment() {
         setHasOptionsMenu(true)
         viewPager.adapter = SectionsPagerAdapter(activity!!.supportFragmentManager)
 
-        activity?.findViewById<TabLayout>(R.id.tabs)?.setupWithViewPager(viewPager)
+        activity?.findViewById<TabLayout>(R.id.tabs)?.apply {
+            setupWithViewPager(viewPager)
+        }
     }
-
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
         inflater?.inflate(R.menu.menu_dashboard, menu)
     }
 
     private inner class SectionsPagerAdapter(fragmentManager: FragmentManager) : FragmentStatePagerAdapter(fragmentManager) {
+
+        private val fragments by lazy { listOf(CashFlowFragment(), LoansDashboardFragment(), RiskManagementFragment()) }
 
         private val titles by lazy {
             listOf(
@@ -39,7 +40,6 @@ class DashboardFragment : Fragment() {
                     getString(R.string.risk_management)
             )
         }
-        private val fragments by lazy { listOf(CashFlowFragment(), LoansDashboardFragment(), RiskManagementFragment()) }
 
         override fun getPageTitle(position: Int): CharSequence? = titles[position]
 
@@ -48,4 +48,7 @@ class DashboardFragment : Fragment() {
         override fun getCount(): Int = 3
     }
 
+    interface OnSelectListener {
+        fun onSelected()
+    }
 }

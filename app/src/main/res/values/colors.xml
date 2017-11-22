@@ -25,4 +25,9 @@
     <color name="darkGrayColor">#707b88</color>
 
     <color name="cashTitleColor">#17c231</color>
+
+    <color name="chartColorRed">#CB5B4F</color>
+    <color name="chartColorGreen">#91CE41</color>
+    <color name="chartColorGray">#ACB4C1</color>
+    <color name="chartColorBlue">#3F6EF5</color>
 </resources>
