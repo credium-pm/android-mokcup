@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
+import android.support.v4.app.FragmentStatePagerAdapter
 import android.view.*
 import com.credium.R
 import kotlinx.android.synthetic.main.fragment_notes_main.*
@@ -30,7 +30,7 @@ class DashboardFragment : Fragment() {
         inflater?.inflate(R.menu.menu_dashboard, menu)
     }
 
-    inner class SectionsPagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager) {
+    private inner class SectionsPagerAdapter(fragmentManager: FragmentManager) : FragmentStatePagerAdapter(fragmentManager) {
 
         private val titles by lazy {
             listOf(
@@ -39,7 +39,7 @@ class DashboardFragment : Fragment() {
                     getString(R.string.risk_management)
             )
         }
-        private val fragments by lazy { listOf(CashFlowFragment(), Fragment(), Fragment()) }
+        private val fragments by lazy { listOf(CashFlowFragment(), LoansDashboardFragment(), RiskManagementFragment()) }
 
         override fun getPageTitle(position: Int): CharSequence? = titles[position]
 

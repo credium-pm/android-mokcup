@@ -11,10 +11,12 @@ import com.credium.R
 class CashFlowFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-            inflater.inflate(R.layout.fragment_cash_flow, container, false)
+            inflater.inflate(R.layout.fragment_cash_flow_static, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //val lineChart = LineChart(context)
+        //val entry = Entry(50f, 50f)
     }
 }

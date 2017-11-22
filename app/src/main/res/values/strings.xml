@@ -69,6 +69,9 @@
     <string name="risk_management">Risk management</string>
     <string name="cash_flow">Cash flow</string>
     <string name="search">Search</string>
+    <string name="value">Value</string>
+    <string name="payout_forecast">Payout forecast</string>
+    <string name="histogram_of_risk_management">Histogram of risk management</string>
 
     <plurals name="loan_subtitle2">
         <item quantity="one">One month left</item>
