@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import android.view.*
 import com.credium.R
-import com.credium.util.debug
 import kotlinx.android.synthetic.main.fragment_notes_main.*
 
 
