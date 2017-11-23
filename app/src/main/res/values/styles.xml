@@ -165,4 +165,10 @@
         <item name="android:textAlignment">center</item>
     </style>
 
+    <style name="MarketNoteView">
+        <item name="bottomTitle1">Cash</item>
+        <item name="bottomTitle2">Discount</item>
+        <item name="bottomTitle3">Risk Score</item>
+    </style>
+
 </resources>

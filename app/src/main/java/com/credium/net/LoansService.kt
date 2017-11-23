@@ -40,4 +40,27 @@ object LoansService {
                     riskScore = RiskScore.NORMAL)
     )
 
+    fun fetchMarketNotes(): List<UnlockedLoan> = listOf(
+            UnlockedLoan(
+                    id = 111,
+                    currency = DollarUsaCurrency,
+                    amount = 1000,
+                    amountPerMonth = 50,
+                    months = 20,
+                    sellFor = 450,
+                    discount = 25,
+                    riskScore = 89
+            ),
+            UnlockedLoan(
+                    id = 222,
+                    currency = DollarUsaCurrency,
+                    amount = 600,
+                    amountPerMonth = 30,
+                    months = 20,
+                    sellFor = 450,
+                    discount = 25,
+                    riskScore = 76
+            )
+    )
+
 }
