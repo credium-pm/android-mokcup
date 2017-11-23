@@ -38,7 +38,7 @@ class NotesFragment : Fragment() {
                     getString(R.string.sell_orders)
             )
         }
-        private val fragments by lazy { listOf(PortfolioFragment(), MarketFragment(), Fragment()) }
+        private val fragments by lazy { listOf(PortfolioFragment(), MarketFragment(), SellOrdersFragment()) }
 
         override fun getPageTitle(position: Int): CharSequence? = titles[position]
 

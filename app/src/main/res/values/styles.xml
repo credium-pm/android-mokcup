@@ -171,4 +171,10 @@
         <item name="bottomTitle3">Risk Score</item>
     </style>
 
+    <style name="SellOrdersNoteView">
+        <item name="bottomTitle1">Cash</item>
+        <item name="bottomTitle2">Discount</item>
+        <item name="bottomTitle3">Days On Market</item>
+    </style>
+
 </resources>

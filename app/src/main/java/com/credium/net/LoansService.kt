@@ -63,4 +63,29 @@ object LoansService {
             )
     )
 
+    fun fetchSellOrderNotes(): List<UnlockedLoan> = listOf(
+            UnlockedLoan(
+                    id = 1111,
+                    currency = DollarUsaCurrency,
+                    amount = 1000,
+                    amountPerMonth = 50,
+                    months = 20,
+                    sellFor = 450,
+                    discount = 25,
+                    riskScore = 89,
+                    daysOnMarket = 1
+            ),
+            UnlockedLoan(
+                    id = 2222,
+                    currency = DollarUsaCurrency,
+                    amount = 600,
+                    amountPerMonth = 30,
+                    months = 20,
+                    sellFor = 450,
+                    discount = 25,
+                    riskScore = 76,
+                    daysOnMarket = 1
+            )
+    )
+
 }

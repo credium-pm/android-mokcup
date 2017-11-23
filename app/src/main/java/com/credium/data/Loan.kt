@@ -24,5 +24,6 @@ class UnlockedLoan(id: Int,
                    var pendingAmount: Int = 0,
                    var sellFor: Int = 0,
                    var discount: Int = 0,
-                   var riskScore: Int = 0
+                   var riskScore: Int = 0,
+                   var daysOnMarket: Int = 0
 ) : Loan(id, currency, amount, amountPerMonth, months, isLocked = false)
