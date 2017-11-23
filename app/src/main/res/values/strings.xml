@@ -72,6 +72,9 @@
     <string name="value">Value</string>
     <string name="payout_forecast">Payout forecast</string>
     <string name="histogram_of_risk_management">Histogram of risk management</string>
+    <string name="risk_score">Risk Score</string>
+    <string name="score_change">Score Change</string>
+    <string name="apr">APR</string>
 
     <plurals name="loan_subtitle2">
         <item quantity="one">One month left</item>

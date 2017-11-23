@@ -5,15 +5,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-static def getDateTime() {
+/*static def getDateTime() {
     DateFormat df = new SimpleDateFormat("YYYY-MM-dd_HH.mm")
     return df.format(new Date())
-}
+}*/
 
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.credium"
+        applicationId "com.credium.mockup"
         minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
@@ -21,11 +21,11 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
-        android.applicationVariants.all { variant ->
+        /*android.applicationVariants.all { variant ->
             variant.outputs.each { output ->
                 output.outputFileName = new File("debug-" + getDateTime() + ".apk")
             }
-        }
+        }*/
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'

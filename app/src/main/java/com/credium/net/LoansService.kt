@@ -1,8 +1,6 @@
 package com.credium.net
 
-import com.credium.data.DollarUsaCurrency
-import com.credium.data.Loan
-import com.credium.data.LockedLoan
+import com.credium.data.*
 
 
 object LoansService {
@@ -14,4 +12,32 @@ object LoansService {
             LockedLoan(id = ++lastId, currency = DollarUsaCurrency, amount = 1500, amountPerMonth = 150, months = 10),
             LockedLoan(id = ++lastId, currency = DollarUsaCurrency, amount = 2100, amountPerMonth = 300, months = 7)
     )
+
+    fun fetchPortfolioNotes() = listOf(
+            Note(loan = UnlockedLoan(id = 11, currency = DollarUsaCurrency, amount = 1000, amountPerMonth = 50, months = 12),
+                    riskPercentage = 89,
+                    apr = 13,
+                    riskScore = RiskScore.INCREASE),
+            Note(loan = UnlockedLoan(id = 22, currency = DollarUsaCurrency, amount = 180, amountPerMonth = 30, months = 6),
+                    riskPercentage = 67,
+                    apr = 19,
+                    riskScore = RiskScore.DECREASE),
+            Note(loan = UnlockedLoan(id = 33, currency = DollarUsaCurrency, amount = 75, amountPerMonth = 15, months = 5),
+                    riskPercentage = 73,
+                    apr = 10,
+                    riskScore = RiskScore.NORMAL),
+            Note(loan = UnlockedLoan(id = 44, currency = DollarUsaCurrency, amount = 1000, amountPerMonth = 50, months = 12),
+                    riskPercentage = 89,
+                    apr = 13,
+                    riskScore = RiskScore.INCREASE),
+            Note(loan = UnlockedLoan(id = 55, currency = DollarUsaCurrency, amount = 180, amountPerMonth = 30, months = 6),
+                    riskPercentage = 67,
+                    apr = 19,
+                    riskScore = RiskScore.DECREASE),
+            Note(loan = UnlockedLoan(id = 66, currency = DollarUsaCurrency, amount = 75, amountPerMonth = 15, months = 5),
+                    riskPercentage = 73,
+                    apr = 10,
+                    riskScore = RiskScore.NORMAL)
+    )
+
 }

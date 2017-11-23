@@ -18,7 +18,7 @@
     <color name="descriptionTextColor">#1c2a3c</color>
 
     <color name="inactiveControlColor">#a9b4c2</color>
-    <color name="inactiveControlLightColor">#F6F8F9</color>
+    <color name="inactiveControlLightColor">#f6f8f9</color>
 
     <color name="grayControlColor">#a8b4c1</color>
     <color name="separatorColor">#C9D6E7</color>
@@ -30,4 +30,8 @@
     <color name="chartColorGreen">#91CE41</color>
     <color name="chartColorGray">#ACB4C1</color>
     <color name="chartColorBlue">#3F6EF5</color>
+
+    <color name="riskScoreIncrease">#17c231</color>
+    <color name="riskScoreNormal">#e39e0e</color>
+    <color name="riskScoreDecrease">#b91e1e</color>
 </resources>

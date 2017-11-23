@@ -145,4 +145,24 @@
         <item name="radioImage">@drawable/ic_radio_gray</item>
     </style>
 
+    <style name="NoteItemBoldText" parent="SmallTitleText">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RiskInfoLightText" parent="DescriptionText">
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">#1c2a3c</item>
+        <item name="android:textSize">@dimen/textSize_13sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="RiskInfoText" parent="DescriptionText">
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/textSize_16sp</item>
+        <item name="android:textColor">#1c2a3c</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
 </resources>
