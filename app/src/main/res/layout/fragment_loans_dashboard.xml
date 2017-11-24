@@ -39,7 +39,7 @@
             app:layout_constraintTop_toBottomOf="@+id/loansText" />
 
         <com.credium.views.ChartDescriptionView
-            android:id="@+id/lockedDesc"
+            android:id="@+id/lowRiskDesc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -60,7 +60,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/lockedDesc"
+            app:layout_constraintStart_toEndOf="@+id/lowRiskDesc"
             app:layout_constraintTop_toBottomOf="@+id/pieChart"
             app:radioImage="@drawable/ic_radio_blue"
             app:subTitle="Unocked Loans"
@@ -75,7 +75,7 @@
             app:layout_constraintEnd_toStartOf="@+id/cashedDesc"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lockedDesc"
+            app:layout_constraintTop_toBottomOf="@+id/lowRiskDesc"
             app:radioImage="@drawable/ic_radio_gray"
             app:subTitle="Pending Sell Orders"
             app:title="2" />

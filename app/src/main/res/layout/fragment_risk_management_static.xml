@@ -1,30 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/defaultBg">
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:orientation="vertical"
-        android:padding="@dimen/margin_default">
+        android:paddingBottom="@dimen/margin_default"
+        android:background="@android:color/white">
 
         <TextView
+            android:id="@+id/titleText"
             style="@style/LargeTitleText"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:text="@string/histogram_of_risk_management" />
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/histogram_of_risk_management"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:id="@+id/staticImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/histogram_static" />
+            android:src="@drawable/histogram_static"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleText" />
 
-    </LinearLayout>
+        <com.credium.views.ChartDescriptionView
+            android:id="@+id/lowRiskDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/staticImage"
+            app:radioImage="@drawable/ic_radio_green"
+            app:subTitle="$28k"
+            app:title="Low Risk" />
+
+        <com.credium.views.ChartDescriptionView
+            android:id="@+id/mediumRiskDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lowRiskDesc"
+            app:radioImage="@drawable/ic_radio_blue"
+            app:subTitle="$38k"
+            app:title="Medium Risk" />
+
+        <com.credium.views.ChartDescriptionView
+            android:id="@+id/highRiskDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mediumRiskDesc"
+            app:radioImage="@drawable/ic_radio_red"
+            app:subTitle="$7k"
+            app:title="High Risk" />
+
+    </android.support.constraint.ConstraintLayout>
+
 
 </FrameLayout>
