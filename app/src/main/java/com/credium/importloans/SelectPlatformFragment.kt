@@ -39,13 +39,13 @@ class SelectPlatformFragment : Fragment() {
         lendingClubButton.onClickListener = {
             prosperButton.clearSelection()
             avantButton.clearSelection()
-            barCodeReadApproach = TAKE_PICTURE
+            barCodeReadApproach = USE_QR_READER
         }
 
         prosperButton.onClickListener = {
             lendingClubButton.clearSelection()
             avantButton.clearSelection()
-            barCodeReadApproach = USE_QR_READER
+            barCodeReadApproach = TAKE_PICTURE
         }
 
         avantButton.onClickListener = {
