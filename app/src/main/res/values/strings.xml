@@ -35,6 +35,7 @@
     <!-- Templates -->
     <string name="amount_and_currency_template">%1$s %2$s</string>
     <string name="locked_loan_template_title">%1$s %2$s (Locked)</string>
+    <string name="unlocked_loan_template_title">%1$s %2$s (Unlocked)</string>
     <string name="loan_subtitle1">%1$s %2$s per month</string>
     <string name="loan_pending">%1$s note pending sell for %2$s</string>
     <string name="loans_imported_template">%1$s loans imported</string>

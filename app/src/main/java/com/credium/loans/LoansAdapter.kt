@@ -60,7 +60,7 @@ class LoansAdapter(
         fun bind(loan: Loan) {
             val context = titleText.context
             val drawableResource = if (loan.isLocked) R.drawable.ic_circle_locked else R.drawable.ic_circle_unlocked
-            val stringResource = if (loan.isLocked) R.string.locked_loan_template_title else R.string.amount_and_currency_template
+            val stringResource = if (loan.isLocked) R.string.locked_loan_template_title else R.string.unlocked_loan_template_title
 
             iconImage.setImageDrawable(ContextCompat.getDrawable(context, drawableResource))
             titleText.text = context.getString(stringResource, loan.amount.toString(), loan.currency.label)
