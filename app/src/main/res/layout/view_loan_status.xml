@@ -14,8 +14,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/margin_small"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small">
 
         <TextView
             style="@style/LargeTitleSpanText"
@@ -37,14 +37,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_large"
         android:layout_marginBottom="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:orientation="vertical">
 
             <ImageView
@@ -55,11 +55,12 @@
                 tools:src="@drawable/ic_circle_locked" />
 
             <TextView
-                style="@style/DescriptionText"
-                android:layout_width="wrap_content"
+                style="@style/StatusLoanText"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/locked" />
+                android:text="@string/locked"
+                android:textAlignment="center" />
 
         </LinearLayout>
 
@@ -74,7 +75,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:orientation="vertical">
 
             <ImageView
@@ -85,8 +86,8 @@
                 tools:src="@drawable/ic_circle_unlocked_inactive" />
 
             <TextView
-                style="@style/DescriptionText"
-                android:layout_width="wrap_content"
+                style="@style/StatusLoanText"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/unlocked" />
@@ -105,7 +106,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:orientation="vertical">
 
             <ImageView
@@ -116,11 +117,12 @@
                 android:src="@drawable/ic_circle_cash_inactive" />
 
             <TextView
-                style="@style/DescriptionText"
-                android:layout_width="wrap_content"
+                style="@style/StatusLoanText"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/cash" />
+                android:text="@string/cash"
+                android:textAlignment="center" />
 
         </LinearLayout>
 

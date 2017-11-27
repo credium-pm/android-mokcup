@@ -73,6 +73,11 @@
         <item name="android:textColor">@color/descriptionTextColor</item>
     </style>
 
+    <style name="StatusLoanText" parent="DescriptionText">
+        <item name="android:maxLines">1</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
     <style name="ColoredButton">
         <item name="android:layout_height">54dp</item>
         <item name="android:textAlignment">center</item>
