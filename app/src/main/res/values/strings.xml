@@ -43,8 +43,8 @@
 
     <!-- Static text -->
     <string name="enable_camera_permission">Please enable camera permission</string>
-    <string name="splash_version">v0.5.0</string>
-    <string name="splash_version_date">Nov 24, 2017</string>
+    <string name="splash_version">v0.4.05</string>
+    <string name="splash_version_date">Nov 27, 2017</string>
     <string name="import_loans_title">Import loans from the following lending platform</string>
     <string name="loans_imported_successfully">Loans imported successfully</string>
     <string name="import_loans_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
